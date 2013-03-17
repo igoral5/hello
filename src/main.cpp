@@ -4,7 +4,11 @@
  *  Created on: 17.03.2013
  *      Author: igor
  */
-
+#ifdef HAVE_CONFIG_H
+#include "config.h"
+#endif
+#include "gettext.h"
+#define _(string) gettext(string)
 #include <iostream>
 #include <cstdlib>
 #include <exception>
@@ -15,17 +19,19 @@ main(int argc, char *argv[])
 try
 {
 	std::locale::global(std::locale(""));
-	std::cout << "Hello World !" << std::endl;
+	bindtextdomain(PACKAGE, LOCALEDIR);
+	textdomain(PACKAGE);
+	std::cout << _("Hello World !") << std::endl;
 	return EXIT_SUCCESS;
 }
 catch(const std::exception& er)
 {
-	std::cerr << "An exception occurred: " << er.what() << std::endl;
+	std::cerr << _("An exception occurred: ") << er.what() << std::endl;
 	return EXIT_FAILURE;
 }
 catch(...)
 {
-	std::cerr << "An unknown exception" << std::endl;
+	std::cerr << _("An unknown exception") << std::endl;
 	return EXIT_FAILURE;
 }
 
