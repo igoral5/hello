@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hello 0.01\n"
 "Report-Msgid-Bugs-To: igoral@gmail.com\n"
-"POT-Creation-Date: 2013-03-17 21:45+0400\n"
+"POT-Creation-Date: 2013-04-08 16:43+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,14 +17,54 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main.cpp:24
+#: src/main.cpp:26
 msgid "Hello World !"
 msgstr ""
 
-#: src/main.cpp:29
+#: src/main.cpp:29 src/main.cpp:40
+msgid "First term: "
+msgstr ""
+
+#: src/main.cpp:30 src/main.cpp:41
+msgid "Second term: "
+msgstr ""
+
+#: src/main.cpp:31 src/main.cpp:42
+msgid "Sum: "
+msgstr ""
+
+#: src/main.cpp:32
+msgid "Absolute value: "
+msgstr ""
+
+#: src/main.cpp:35
+msgid "Dividend: "
+msgstr ""
+
+#: src/main.cpp:36
+msgid "Divisor: "
+msgstr ""
+
+#: src/main.cpp:37
+msgid "Quotient: "
+msgstr ""
+
+#: src/main.cpp:46
+msgid "First multiplier: "
+msgstr ""
+
+#: src/main.cpp:47
+msgid "Second multiplier: "
+msgstr ""
+
+#: src/main.cpp:48
+msgid "Product: "
+msgstr ""
+
+#: src/main.cpp:53
 msgid "An exception occurred: "
 msgstr ""
 
-#: src/main.cpp:34
+#: src/main.cpp:58
 msgid "An unknown exception"
 msgstr ""
