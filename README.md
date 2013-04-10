@@ -11,3 +11,8 @@ make install<br>
 make install-strip<br>
 make uninstall<br>
 make distcheck
+
+Cross compiling for Raspberry Pi:<br>
+
+CXX='arm-linux-gnueabihf-g++' STRIP='arm-linux-gnueabihf-strip' CXXFLAGS="-ggdb -Wall -Werror" ./configure --host=arm-linux --prefix=/home/pi/test
+
