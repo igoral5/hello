@@ -40,8 +40,8 @@ try
     std::cout << _("First term: ") << a1 << std::endl;
     std::cout << _("Second term: ") << b1 << std::endl;
     std::cout << _("Sum: ") << a1 + b1 << std::endl;
-    mpf_class d1("2,34123432453464575678876897978978987e12345", 1000);
-    mpf_class e1("3,456457568768964634645756783567356756e45235", 1000);
+    mpf_class d1(_("2.34123432453464575678876897978978987e12345"), 1000);
+    mpf_class e1(_("3.456457568768964634645756783567356756e45235"), 1000);
     std::cout << std::setprecision(100);
     std::cout << _("First multiplier: ")<< d1 << std::endl;
     std::cout << _("Second multiplier: ") << e1 << std::endl;
