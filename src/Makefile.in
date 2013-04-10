@@ -73,6 +73,8 @@ PROGRAMS = $(bin_PROGRAMS)
 am_hello_OBJECTS = main.$(OBJEXT)
 hello_OBJECTS = $(am_hello_OBJECTS)
 hello_LDADD = $(LDADD)
+hello_LINK = $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(hello_LDFLAGS) \
+	$(LDFLAGS) -o $@
 DEFAULT_INCLUDES = -I.@am__isrc@
 depcomp = $(SHELL) $(top_srcdir)/build-aux/depcomp
 am__depfiles_maybe = depfiles
@@ -217,6 +219,7 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AM_CPPFLAGS = -DLOCALEDIR=\"$(localedir)\"
 hello_SOURCES = main.cpp gettext.h
+hello_LDFLAGS = -lgmpxx -lgmp
 all: config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 
@@ -309,7 +312,7 @@ clean-binPROGRAMS:
 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
 hello$(EXEEXT): $(hello_OBJECTS) $(hello_DEPENDENCIES) $(EXTRA_hello_DEPENDENCIES) 
 	@rm -f hello$(EXEEXT)
-	$(CXXLINK) $(hello_OBJECTS) $(hello_LDADD) $(LIBS)
+	$(hello_LINK) $(hello_OBJECTS) $(hello_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
