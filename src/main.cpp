@@ -10,7 +10,6 @@
 #include "gettext.h"
 #define _(string) gettext(string)
 #include <iostream>
-#include <iomanip>
 #include <cstdlib>
 #include <exception>
 #include <locale>
